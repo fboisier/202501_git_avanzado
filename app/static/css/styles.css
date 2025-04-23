@@ -1,0 +1,81 @@
+/* Estilos generales */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos para las tarjetas */
+.card {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+    padding: 15px 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Estilo para botones */
+.btn {
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* Estilos para tablas */
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    border-top: none;
+    font-weight: 600;
+}
+
+/* Estrellas de rating */
+.fa-star {
+    color: #ffc107;
+    margin-right: 2px;
+}
+
+/* Mejoras visuales para formularios */
+.form-control, .form-select {
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Personalización de alertas */
+.alert {
+    border-radius: 5px;
+}
+
+/* Estilos para los badges */
+.badge {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .btn-sm {
+        margin-bottom: 5px;
+    }
+    
+    .d-flex.justify-content-between {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    
+    .d-flex.justify-content-between div:last-child {
+        margin-top: 10px;
+    }
+}

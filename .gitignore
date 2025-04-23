@@ -1,0 +1,45 @@
+# Entornos virtuales
+venv/
+.env
+
+# Archivos de configuración locales
+*.env
+
+# Archivos de dependencias generados
+Pipfile.lock
+
+# Archivos de bases de datos y backups
+*.sqlite3
+*.db
+*.sql
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+
+# Archivos compilados
+*.so
+*.pyd
+*.pyc
+
+# Archivos de logs
+*.log
+
+# Directorios de migraciones (si generaran archivos temporales)
+migrations/__pycache__/
+
+# Archivos subidos por usuarios
+app/static/uploads/
+
+# Archivos y carpetas de IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Otros archivos ocultos
+.DS_Store
+Thumbs.db
+
+# GitHub
+.github/
