@@ -1,0 +1,6 @@
+Nombre;Fecha;Rating;Comentarios
+Parque Nacional Torres del Paine;22/04/2025;5;Visita espectacular, muy recomendado.
+Parque Nacional La Campana;21/04/2025;4;Buen clima, senderos limpios.
+Parque No Existente;20/04/2025;3;Este parque no existe, debe fallar.
+Parque Nacional Torres del Paine;31/02/2025;2;Fecha inválida, debe fallar.
+Parque Nacional La Campana;22/04/2025;6;Rating fuera de rango, debe fallar.
