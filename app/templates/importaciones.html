@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Historial de importaciones</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Usuario</th>
+                <th>Fecha</th>
+                <th>Archivo</th>
+                <th>Resumen</th>
+                <th>Detalle</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for header in headers %}
+            <tr>
+                <td>{{ header.id }}</td>
+                <td>{{ header.usuario_id }}</td>
+                <td>{{ header.fecha_importacion }}</td>
+                <td>{{ header.nombre_archivo }}</td>
+                <td>{{ header.resumen_general }}</td>
+                <td><a href="/importaciones/{{ header.id }}" class="btn btn-info btn-sm">Ver detalle</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/importar_visitas" class="btn btn-primary">Nueva importación</a>
+</div>
+{% endblock %}

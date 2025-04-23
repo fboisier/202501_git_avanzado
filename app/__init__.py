@@ -14,3 +14,5 @@ bcrypt = Bcrypt(app)
 
 # Importar controladores después de crear la aplicación para evitar importaciones circulares
 from app.controllers import user_controller, visit_controller
+from app.controllers.import_controller import bp as import_bp
+app.register_blueprint(import_bp)
