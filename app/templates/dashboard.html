@@ -53,7 +53,7 @@
                                     <span class="badge bg-secondary">Sin foto</span>
                                     {% endif %}
                                 </td>
-                                <td>{{ visit.date }}</td>
+                                <td>{{ visit.date.strftime('%d/%m/%Y') }}</td>
                                 <td>
                                     {% for i in range(visit.rating) %}
                                     <i class="fas fa-star text-warning">★</i>
@@ -106,7 +106,7 @@
                                     <span class="badge bg-secondary">Sin foto</span>
                                     {% endif %}
                                 </td>
-                                <td>{{ visit.date }}</td>
+                                <td>{{ visit.date.strftime('%d/%m/%Y') }}</td>
                                 <td>
                                     {% for i in range(visit.rating) %}
                                     <i class="fas fa-star text-warning">★</i>
