@@ -7,6 +7,7 @@
     <div class="col">
         <h1 class="display-5">Bienvenido {{ user_name }}</h1>
         <a href="{{ url_for('new_visit') }}" class="btn btn-primary">Crear Nueva Visita</a>
+        <a href="/importar_visitas" class="btn btn-warning ms-2">Importar visitas masivamente</a>
     </div>
 </div>
 
@@ -53,7 +54,7 @@
                                     <span class="badge bg-secondary">Sin foto</span>
                                     {% endif %}
                                 </td>
-                                <td>{{ visit.date }}</td>
+                                <td>{{ visit.date.strftime('%d/%m/%Y') }}</td>
                                 <td>
                                     {% for i in range(visit.rating) %}
                                     <i class="fas fa-star text-warning">★</i>
@@ -106,7 +107,7 @@
                                     <span class="badge bg-secondary">Sin foto</span>
                                     {% endif %}
                                 </td>
-                                <td>{{ visit.date }}</td>
+                                <td>{{ visit.date.strftime('%d/%m/%Y') }}</td>
                                 <td>
                                     {% for i in range(visit.rating) %}
                                     <i class="fas fa-star text-warning">★</i>

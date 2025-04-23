@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Detalle de importación #{{ header.id }}</h2>
+    <p><strong>Usuario:</strong> {{ header.usuario_id }}<br>
+    <strong>Fecha:</strong> {{ header.fecha_importacion }}<br>
+    <strong>Archivo:</strong> {{ header.nombre_archivo }}<br>
+    <strong>Resumen:</strong> {{ header.resumen_general }}</p>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Línea</th>
+                <th>Nombre</th>
+                <th>Fecha</th>
+                <th>Rating</th>
+                <th>Comentarios</th>
+                <th>Resultado</th>
+                <th>Mensaje de error</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for det in detalles %}
+            <tr class="{% if det.resultado == 'ERROR' %}table-danger{% else %}table-success{% endif %}">
+                <td>{{ det.linea_numero }}</td>
+                <td>{{ det.nombre }}</td>
+                <td>{{ det.fecha }}</td>
+                <td>{{ det.rating }}</td>
+                <td>{{ det.comentarios }}</td>
+                <td>{{ det.resultado }}</td>
+                <td>{{ det.mensaje_error }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/importaciones" class="btn btn-secondary">Volver al historial</a>
+</div>
+{% endblock %}

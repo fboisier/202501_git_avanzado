@@ -11,7 +11,6 @@ Pipfile.lock
 # Archivos de bases de datos y backups
 *.sqlite3
 *.db
-*.sql
 
 # Archivos de caché de Python
 __pycache__/
